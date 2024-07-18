@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:gap/gap.dart';
 
 class ChildDetails extends StatefulWidget {
@@ -114,8 +115,8 @@ class _ChildDetailsState extends State<ChildDetails> {
             width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(
               borderRadius: const BorderRadius.only(
-                bottomLeft: Radius.circular(30),
-                bottomRight: Radius.circular(30),
+                bottomLeft: Radius.circular(20),
+                bottomRight: Radius.circular(20),
               ),
               gradient: LinearGradient(
                 begin: Alignment.centerLeft,
@@ -147,21 +148,21 @@ class _ChildDetailsState extends State<ChildDetails> {
                         backgroundImage: AssetImage(widget.imageURL),
                       ),
                       const Gap(10),
-                      const Column(
+                      Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            "Joao Carlos Ferreira",
-                            style: TextStyle(
+                            widget.name,
+                            style: const TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.w600,
                               color: Colors.white,
                             ),
                           ),
                           Text(
-                            "11 years",
-                            style: TextStyle(
+                            widget.old,
+                            style: const TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.w500,
                               color: Colors.white,
@@ -181,37 +182,13 @@ class _ChildDetailsState extends State<ChildDetails> {
                     ],
                   ),
                 ),
-                const Gap(30),
                 Container(
                   margin: const EdgeInsets.only(left: 20, right: 20),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
-                      const Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "Veccines",
-                            style: TextStyle(
-                              fontSize: 22,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white,
-                            ),
-                          ),
-                          Gap(5),
-                          Text(
-                            "Adicionar",
-                            style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w400,
-                              color: Colors.white,
-                            ),
-                          ),
-                          Gap(10),
-                        ],
-                      ),
+                      const Spacer(),
                       TextButton(
                         onPressed: () {},
                         child: const Text(
@@ -265,11 +242,15 @@ class _ChildDetailsState extends State<ChildDetails> {
                                           crossAxisAlignment:
                                               CrossAxisAlignment.center,
                                           children: [
-                                            const CircleAvatar(
-                                              radius: 40,
-                                              child: Icon(
-                                                Icons.vaccines_outlined,
-                                                size: 40,
+                                            CircleAvatar(
+                                              radius: 50,
+                                              backgroundColor:
+                                                  Colors.blue.shade900,
+                                              child: Padding(
+                                                padding:
+                                                    const EdgeInsets.all(15.0),
+                                                child: Image.asset(
+                                                    "assets/vaccination.png"),
                                               ),
                                             ),
                                             Container(
@@ -279,7 +260,7 @@ class _ChildDetailsState extends State<ChildDetails> {
                                                 color: Colors.grey
                                                     .withOpacity(0.4),
                                                 borderRadius:
-                                                    BorderRadius.circular(20),
+                                                    BorderRadius.circular(10),
                                               ),
                                               child: Row(
                                                 children: [
@@ -293,9 +274,10 @@ class _ChildDetailsState extends State<ChildDetails> {
                                                     listOfVaccine[index]
                                                         ['name'],
                                                     style: const TextStyle(
-                                                        fontSize: 18,
-                                                        fontWeight:
-                                                            FontWeight.bold),
+                                                      fontSize: 18,
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                    ),
                                                   ),
                                                 ],
                                               ),
@@ -307,7 +289,7 @@ class _ChildDetailsState extends State<ChildDetails> {
                                                 color: Colors.grey
                                                     .withOpacity(0.4),
                                                 borderRadius:
-                                                    BorderRadius.circular(20),
+                                                    BorderRadius.circular(10),
                                               ),
                                               child: Row(
                                                 children: [
@@ -352,7 +334,7 @@ class _ChildDetailsState extends State<ChildDetails> {
                                                 color: Colors.grey
                                                     .withOpacity(0.4),
                                                 borderRadius:
-                                                    BorderRadius.circular(20),
+                                                    BorderRadius.circular(10),
                                               ),
                                               child: Row(
                                                 children: [
@@ -378,10 +360,18 @@ class _ChildDetailsState extends State<ChildDetails> {
                                                 ],
                                               ),
                                             ),
+                                            Gap(10),
                                             ElevatedButton(
                                               style: ElevatedButton.styleFrom(
                                                 backgroundColor: Colors.blue,
                                                 shadowColor: Colors.transparent,
+                                                minimumSize: Size(300, 50),
+                                                shape: RoundedRectangleBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                    8,
+                                                  ),
+                                                ),
                                               ),
                                               onPressed: () {
                                                 Navigator.pop(context);
@@ -390,13 +380,14 @@ class _ChildDetailsState extends State<ChildDetails> {
                                                 setState(() {});
                                               },
                                               child: const Text(
-                                                "I did apply",
+                                                "Done Vaccination",
                                                 style: TextStyle(
                                                   fontSize: 18,
                                                   color: Colors.white,
                                                 ),
                                               ),
                                             ),
+                                            Gap(10),
                                           ],
                                         ),
                                       ),

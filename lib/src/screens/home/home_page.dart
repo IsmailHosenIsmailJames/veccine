@@ -1,3 +1,4 @@
+import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:veccine/src/screens/child_details/child_details.dart';
@@ -74,7 +75,7 @@ class _HomePageState extends State<HomePage> {
                     left: 20, top: 20, bottom: 5, right: 20),
                 decoration: BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.circular(30),
+                  borderRadius: BorderRadius.circular(15),
                 ),
                 child: ListView(
                   padding: const EdgeInsets.all(20),
@@ -86,10 +87,9 @@ class _HomePageState extends State<HomePage> {
                           context,
                           MaterialPageRoute(
                             builder: (context) => ChildDetails(
-                              imageURL:
-                                  "assets/boy-goes-to-school-free-photo.jpg",
+                              imageURL: "assets/bangladesh_2_with_credit.jpg",
                               old: "11 years",
-                              name: "Joao Carlos Ferreira",
+                              name: "Jakariya Islam",
                               barthDate: DateTime(2013, 7, 15),
                             ),
                           ),
@@ -102,7 +102,7 @@ class _HomePageState extends State<HomePage> {
                             const CircleAvatar(
                               radius: 40,
                               backgroundImage: AssetImage(
-                                "assets/boy-goes-to-school-free-photo.jpg",
+                                "assets/bangladesh_2_with_credit.jpg",
                               ),
                             ),
                             const Gap(10),
@@ -111,7 +111,7 @@ class _HomePageState extends State<HomePage> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  "Joao Carlos Ferreira",
+                                  "Jakariya Islam",
                                   style: TextStyle(
                                     fontSize: 20,
                                     fontWeight: FontWeight.w600,
@@ -154,7 +154,7 @@ class _HomePageState extends State<HomePage> {
                               imageURL:
                                   "assets/adorable-baby-with-vibrant-clothing-in-a-playful-pose-ai-generative-photo.jpg",
                               old: "9 Months",
-                              name: "Clara Ferreira",
+                              name: "Amina Akter",
                               barthDate: DateTime(2023, 10, 15),
                             ),
                           ),
@@ -175,7 +175,7 @@ class _HomePageState extends State<HomePage> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  "Clara Ferreira",
+                                  "Amina Akter",
                                   style: TextStyle(
                                     fontSize: 20,
                                     fontWeight: FontWeight.w600,
@@ -212,7 +212,7 @@ class _HomePageState extends State<HomePage> {
                 style: IconButton.styleFrom(backgroundColor: Colors.white),
                 onPressed: () {},
                 icon: Icon(
-                  Icons.person_add_alt_1,
+                  FluentIcons.people_add_32_filled,
                   size: 36,
                   color: Colors.blue.shade900,
                 ),
@@ -231,10 +231,8 @@ class _HomePageState extends State<HomePage> {
                             backgroundColor: Colors.lightBlue,
                           ),
                           onPressed: () {},
-                          icon: const Icon(
-                            Icons.vaccines,
-                            size: 50,
-                            color: Colors.white,
+                          icon: Image.asset(
+                            "assets/vaccination.png",
                           ),
                         ),
                       ),
@@ -254,20 +252,15 @@ class _HomePageState extends State<HomePage> {
                         height: 80,
                         width: 80,
                         child: IconButton(
-                          style: IconButton.styleFrom(
-                            backgroundColor: Colors.lightBlue,
-                          ),
-                          onPressed: () {},
-                          icon: const Icon(
-                            Icons.monitor_heart_outlined,
-                            size: 50,
-                            color: Colors.white,
-                          ),
-                        ),
+                            style: IconButton.styleFrom(
+                              backgroundColor: Colors.lightBlue,
+                            ),
+                            onPressed: () {},
+                            icon: Image.asset("assets/announcement.png")),
                       ),
                       const Gap(10),
                       const Text(
-                        "CAMPANAS",
+                        "Campaign",
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 24,
@@ -291,11 +284,7 @@ class _HomePageState extends State<HomePage> {
                             backgroundColor: Colors.lightBlue,
                           ),
                           onPressed: () {},
-                          icon: const Icon(
-                            Icons.location_on,
-                            size: 50,
-                            color: Colors.white,
-                          ),
+                          icon: Image.asset("assets/location.png"),
                         ),
                       ),
                       const Gap(10),
@@ -314,16 +303,11 @@ class _HomePageState extends State<HomePage> {
                         height: 80,
                         width: 80,
                         child: IconButton(
-                          style: IconButton.styleFrom(
-                            backgroundColor: Colors.lightBlue,
-                          ),
-                          onPressed: () {},
-                          icon: const Icon(
-                            Icons.settings,
-                            size: 50,
-                            color: Colors.white,
-                          ),
-                        ),
+                            style: IconButton.styleFrom(
+                              backgroundColor: Colors.lightBlue,
+                            ),
+                            onPressed: () {},
+                            icon: Image.asset("assets/setting.png")),
                       ),
                       const Gap(10),
                       const Text(
