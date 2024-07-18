@@ -85,11 +85,12 @@ class _HomePageState extends State<HomePage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const ChildDetails(
+                            builder: (context) => ChildDetails(
                               imageURL:
                                   "assets/boy-goes-to-school-free-photo.jpg",
                               old: "11 years",
                               name: "Joao Carlos Ferreira",
+                              barthDate: DateTime(2013, 7, 15),
                             ),
                           ),
                         );
@@ -149,11 +150,12 @@ class _HomePageState extends State<HomePage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const ChildDetails(
+                            builder: (context) => ChildDetails(
                               imageURL:
                                   "assets/adorable-baby-with-vibrant-clothing-in-a-playful-pose-ai-generative-photo.jpg",
                               old: "9 Months",
                               name: "Clara Ferreira",
+                              barthDate: DateTime(2023, 10, 15),
                             ),
                           ),
                         );
