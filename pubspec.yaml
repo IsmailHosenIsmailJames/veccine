@@ -74,6 +74,7 @@ flutter:
     - assets/vaccination.png
     - assets/setting.png
     - assets/location.png
+    - assets/SPRK_default_preset_name_custom.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
@@ -106,6 +107,12 @@ flutter_native_splash:
   color_dark: "#121212"
   image_dark: assets/SPRK_default_preset_name_custom.png
   web: true
+
+  android_12:
+    image: assets/SPRK_default_preset_name_custom.png
+    icon_background_color: "#ffffff"
+    image_dark: assets/SPRK_default_preset_name_custom.png
+    icon_background_color_dark: "#121212"
 
 flutter_launcher_icons:
   android: "launcher_icon"

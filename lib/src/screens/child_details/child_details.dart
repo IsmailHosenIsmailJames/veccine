@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:gap/gap.dart';
 
 class ChildDetails extends StatefulWidget {
@@ -99,6 +98,9 @@ class _ChildDetailsState extends State<ChildDetails> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: const Text("Vacciens Details"),
+        foregroundColor: Colors.white,
+        centerTitle: true,
         backgroundColor: Colors.transparent,
         iconTheme: const IconThemeData(
           size: 30,
@@ -243,7 +245,7 @@ class _ChildDetailsState extends State<ChildDetails> {
                                               CrossAxisAlignment.center,
                                           children: [
                                             CircleAvatar(
-                                              radius: 50,
+                                              radius: 35,
                                               backgroundColor:
                                                   Colors.blue.shade900,
                                               child: Padding(
@@ -360,12 +362,13 @@ class _ChildDetailsState extends State<ChildDetails> {
                                                 ],
                                               ),
                                             ),
-                                            Gap(10),
+                                            const Gap(10),
                                             ElevatedButton(
                                               style: ElevatedButton.styleFrom(
                                                 backgroundColor: Colors.blue,
                                                 shadowColor: Colors.transparent,
-                                                minimumSize: Size(300, 50),
+                                                minimumSize:
+                                                    const Size(300, 50),
                                                 shape: RoundedRectangleBorder(
                                                   borderRadius:
                                                       BorderRadius.circular(
@@ -387,7 +390,7 @@ class _ChildDetailsState extends State<ChildDetails> {
                                                 ),
                                               ),
                                             ),
-                                            Gap(10),
+                                            const Gap(10),
                                           ],
                                         ),
                                       ),

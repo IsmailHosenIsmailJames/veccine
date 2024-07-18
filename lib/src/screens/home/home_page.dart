@@ -1,5 +1,6 @@
 import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:gap/gap.dart';
 import 'package:veccine/src/screens/child_details/child_details.dart';
 
@@ -12,6 +13,12 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   @override
+  void initState() {
+    FlutterNativeSplash.remove();
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.blue.shade800,
@@ -22,29 +29,12 @@ class _HomePageState extends State<HomePage> {
         ),
         backgroundColor: Colors.transparent,
         centerTitle: true,
-        title: const Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            CircleAvatar(
-              radius: 20,
-              backgroundColor: Colors.white,
-              child: Icon(
-                Icons.add,
-                size: 40,
-                color: Colors.blue,
-              ),
-            ),
-            Gap(5),
-            Text(
-              "vaccine",
-              style: TextStyle(
-                fontSize: 40,
-                fontWeight: FontWeight.w900,
-                color: Colors.white,
-              ),
-            ),
-          ],
+        title: SizedBox(
+          height: 58,
+          child: Image.asset(
+            "assets/SPRK_default_preset_name_custom.png",
+            fit: BoxFit.scaleDown,
+          ),
         ),
       ),
       endDrawer: const Drawer(),
@@ -231,8 +221,11 @@ class _HomePageState extends State<HomePage> {
                             backgroundColor: Colors.lightBlue,
                           ),
                           onPressed: () {},
-                          icon: Image.asset(
-                            "assets/vaccination.png",
+                          icon: Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: Image.asset(
+                              "assets/vaccination.png",
+                            ),
                           ),
                         ),
                       ),
@@ -240,9 +233,10 @@ class _HomePageState extends State<HomePage> {
                       const Text(
                         "VACCINES",
                         style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 24,
-                            fontWeight: FontWeight.w500),
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.w500,
+                        ),
                       )
                     ],
                   ),
@@ -252,19 +246,24 @@ class _HomePageState extends State<HomePage> {
                         height: 80,
                         width: 80,
                         child: IconButton(
-                            style: IconButton.styleFrom(
-                              backgroundColor: Colors.lightBlue,
-                            ),
-                            onPressed: () {},
-                            icon: Image.asset("assets/announcement.png")),
+                          style: IconButton.styleFrom(
+                            backgroundColor: Colors.lightBlue,
+                          ),
+                          onPressed: () {},
+                          icon: Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: Image.asset("assets/announcement.png"),
+                          ),
+                        ),
                       ),
                       const Gap(10),
                       const Text(
                         "Campaign",
                         style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 24,
-                            fontWeight: FontWeight.w500),
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.w500,
+                        ),
                       )
                     ],
                   ),
@@ -284,16 +283,20 @@ class _HomePageState extends State<HomePage> {
                             backgroundColor: Colors.lightBlue,
                           ),
                           onPressed: () {},
-                          icon: Image.asset("assets/location.png"),
+                          icon: Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: Image.asset("assets/location.png"),
+                          ),
                         ),
                       ),
                       const Gap(10),
                       const Text(
                         "MAPS",
                         style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 24,
-                            fontWeight: FontWeight.w500),
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.w500,
+                        ),
                       )
                     ],
                   ),
@@ -307,15 +310,19 @@ class _HomePageState extends State<HomePage> {
                               backgroundColor: Colors.lightBlue,
                             ),
                             onPressed: () {},
-                            icon: Image.asset("assets/setting.png")),
+                            icon: Padding(
+                              padding: const EdgeInsets.all(10.0),
+                              child: Image.asset("assets/setting.png"),
+                            )),
                       ),
-                      const Gap(10),
+                      const Gap(7),
                       const Text(
                         "SETTINGS",
                         style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 24,
-                            fontWeight: FontWeight.w500),
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.w500,
+                        ),
                       )
                     ],
                   ),
