@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:veccine/src/screens/child_details/child_details.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -78,96 +79,128 @@ class _HomePageState extends State<HomePage> {
                 child: ListView(
                   padding: const EdgeInsets.all(20),
                   children: [
-                    SizedBox(
-                      height: 120,
-                      child: Row(
-                        children: [
-                          const CircleAvatar(
-                            radius: 40,
-                            backgroundImage: AssetImage(
-                              "assets/boy-goes-to-school-free-photo.jpg",
+                    GestureDetector(
+                      behavior: HitTestBehavior.translucent,
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const ChildDetails(
+                              imageURL:
+                                  "assets/boy-goes-to-school-free-photo.jpg",
+                              old: "11 years",
+                              name: "Joao Carlos Ferreira",
                             ),
                           ),
-                          const Gap(10),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                "Joao Carlos Ferreira",
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.w600,
-                                  color: Colors.grey.shade600,
-                                ),
+                        );
+                      },
+                      child: SizedBox(
+                        height: 120,
+                        child: Row(
+                          children: [
+                            const CircleAvatar(
+                              radius: 40,
+                              backgroundImage: AssetImage(
+                                "assets/boy-goes-to-school-free-photo.jpg",
                               ),
-                              Text(
-                                "11 years",
-                                style: TextStyle(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.grey.shade600,
-                                ),
-                              ),
-                            ],
-                          ),
-                          const Spacer(),
-                          IconButton(
-                            onPressed: () {},
-                            icon: const Icon(
-                              Icons.notifications,
-                              color: Colors.grey,
-                              size: 34,
                             ),
-                          ),
-                        ],
+                            const Gap(10),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  "Joao Carlos Ferreira",
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w600,
+                                    color: Colors.grey.shade600,
+                                  ),
+                                ),
+                                Text(
+                                  "11 years",
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.grey.shade600,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            const Spacer(),
+                            IconButton(
+                              onPressed: () {},
+                              icon: const Icon(
+                                Icons.notifications,
+                                color: Colors.grey,
+                                size: 34,
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     const Divider(
                       thickness: 2,
                     ),
-                    SizedBox(
-                      height: 120,
-                      child: Row(
-                        children: [
-                          const CircleAvatar(
-                            radius: 40,
-                            backgroundImage: AssetImage(
-                                "assets/adorable-baby-with-vibrant-clothing-in-a-playful-pose-ai-generative-photo.jpg"),
-                          ),
-                          const Gap(10),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                "Clara Ferreira",
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.w600,
-                                  color: Colors.grey.shade600,
-                                ),
-                              ),
-                              Text(
-                                "9 Months",
-                                style: TextStyle(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.grey.shade600,
-                                ),
-                              ),
-                            ],
-                          ),
-                          const Spacer(),
-                          IconButton(
-                            onPressed: () {},
-                            icon: const Icon(
-                              Icons.notifications,
-                              color: Colors.grey,
-                              size: 34,
+                    GestureDetector(
+                      behavior: HitTestBehavior.translucent,
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const ChildDetails(
+                              imageURL:
+                                  "assets/adorable-baby-with-vibrant-clothing-in-a-playful-pose-ai-generative-photo.jpg",
+                              old: "9 Months",
+                              name: "Clara Ferreira",
                             ),
                           ),
-                        ],
+                        );
+                      },
+                      child: SizedBox(
+                        height: 120,
+                        child: Row(
+                          children: [
+                            const CircleAvatar(
+                              radius: 40,
+                              backgroundImage: AssetImage(
+                                  "assets/adorable-baby-with-vibrant-clothing-in-a-playful-pose-ai-generative-photo.jpg"),
+                            ),
+                            const Gap(10),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  "Clara Ferreira",
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w600,
+                                    color: Colors.grey.shade600,
+                                  ),
+                                ),
+                                Text(
+                                  "9 Months",
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.grey.shade600,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            const Spacer(),
+                            IconButton(
+                              onPressed: () {},
+                              icon: const Icon(
+                                Icons.notifications,
+                                color: Colors.grey,
+                                size: 34,
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ],
